@@ -46,7 +46,7 @@ public class EmployeeTest {  // creating class
 			Employee.setEmployeeid(101);
 			Employee.setEmployeename("Jane Smith");
 			Employee.setEmployeessn("012-34-4567");
-			Employee.setEmployeesalary(120-345.27);
+			Employee.setEmployeesalary(120_345.27);
 			
 			 // printing the statement using getters
 			System.out.println(" EmployeeID:"+Employee.getEmployeeid());
