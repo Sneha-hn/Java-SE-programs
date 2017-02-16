@@ -123,44 +123,86 @@
  </c:if>
 
 
-
-<div class="container">
-  <h2>OUR POLICY</h2>
-  <ul class="list-group">
-    <li class="list-group-item">Shipping policy</li>
-    <li class="list-group-item">Privacy policy</li>
-    <li class="list-group-item">Terms and conditions</li>
-     <li class="list-group-item">Return policy</li> 
-     <li class="list-group-item">Promotion policy</li>
-  </ul>
+<!-- this is for footer -->
+<nav class="navbar-fixed-bottom">
+  <div class="container-fluid">
   </div>
+</nav>
   
-   <div class="container">
-  <h2>HELP</h2>
-  <ul class="list-group">
-    <li class="list-group-item">Payments</li>
-    <li class="list-group-item">Saved cards</li>
-    <li class="list-group-item">Bulk orders</li>
-    <li class="list-group-item">International orders</li>
-    <li class="list-group-item">contact us</li>
-    <li class="list-group-item">FAQ</li>
-    <li class="list-group-item">report us</li>
-    <li class="list-group-item">cancellation and returns</li>
-  </ul>
-</div>
-
-  <div class="container">
-  <h2>ABOUT JEWELLARYCART</h2>
-  <ul class="list-group">
-    <li class="list-group-item">Track your order</li>
-    <li class="list-group-item">About us</li>
-    <li class="list-group-item">Affiliate prigram</li>
-    <li class="list-group-item">Partner with us</li>
-    <li class="list-group-item">Unsubscribe</li>
+ <div class="container">
+  <div class="row">
+    <div class="col-md-3">
+      <h3>JEWELLERY CART</h3>
+      <hr><div style="float:left;">
+      <ul style="list-style: none;"><li><a href="#"> DOWNLOAD THE APP</a></li>
+       <li><a href="#"> get it on google playstore</a></li>
+        <li><a href="#"> download on appstore</a></li>
+        </ul>
+        </div>
+    </div>
     
-  </ul>
-  </ul>
-</div>
+    <div class="col-md-3"> 
+      <h3>ABOUT US </h3>
+      <hr><div style="float:left;">
+      <ul style="list-style: none;"><li><a href="#"> Track your orders</a></li>
+       <li><a href="#"> About us</a></li>
+        <li><a href="#"> Affiliate programs</a></li>
+        <li><a href="#"> Partner with us</a></li>
+        <li><a href="#"> Unsubscribe</a></li>
+        </ul>
+        </div>
+    </div> 
+    
+    <div class="col-md-3"> 
+      <h3>HELP</h3>
+      <hr><div style="float:left;">
+      <ul style="list-style: none;"><li><a href="#">PaymentsP</a></li>
+       <li><a href="#"> Saved cards</a></li>
+        <li><a href="#"> Bulk orders</a></li>
+        <li><a href="#"> International orders</a></li>
+        <li><a href="#"> contact us</a></li>
+        <li><a href="#"> FAQ</a></li>
+        <li><a href="#"> Report us</a></li>
+        <li><a href="#"> Cancellation and Returns</a></li>
+        </ul>
+        </div>
+    </div>
+    
+    <div class="col-md-3">
+      <h3>OUR POLICY </h3>
+      <hr><div style="float:left;">
+      <ul style="list-style: none;"><li><a href="#"> Shipping policy</a></li>
+       <li><a href="#"> Privacy policy</a></li>
+        <li><a href="#"> Terms of use</a></li>
+        <li><a href="#"> Returns policy </a></li>
+        <li><a href="#"> Promotions policy </a></li>
+        </ul>
+        </div>
+    </div>
+ </div>
+ </div>
  
-</body>
-</html>
+ <div class="container">
+  
+  <button type="button" class="btn btn-info btn-block">Back to top</button>
+  <div class="container">
+  <div class="row">
+    <div class="col-md-3">
+      <h3>SECURE SHOPPING</h3>
+    </div>
+    
+    <div class="col-md-3"> 
+      <h3>REWARDS BY </h3>
+    </div> 
+    
+    <div class="col-md-3"> 
+      <h3>PAYMENTS SYSTEMS</h3>
+ </div>
+ </div>
+ </div>
+ </div>
+ <div>
+ <center> <p > copyrights &copy;2017 &emsp;,All Rights Reserved</p></center>
+  </div>
+ </body>
+ </html>
