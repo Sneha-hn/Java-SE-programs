@@ -36,7 +36,7 @@ body {
 	<div class="container">
 		<ul class="nav navbar-nav navbar-right">
 			<!-- this href should be same as in home controller -->
-			<li><a href="Logout"> Logout</a></li>
+			<li><a  style="margin:0px 0px 0px 0px" href="<c:url value="/j_spring_security_logout" />"> <span class="glyphicon glyphicon-log-out"></span> LOG OUT</a></li>
 			<!-- step1: URL for logout page fo here it will go to home controller -->
 		</ul>
 		<h1 style="text-align: left" style="font-size:250%">JEWELLARY
