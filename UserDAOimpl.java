@@ -5,6 +5,7 @@ import java.util.List;
 import javax.transaction.Transactional;
 
 import org.hibernate.HibernateException;
+import org.hibernate.Query;
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
@@ -24,7 +25,15 @@ public class UserDAOimpl implements UserDAO {
 	
 	@SuppressWarnings("unchecked")
 	public List<User> list(){
-		return sessionFactory.getCurrentSession().createQuery("from User").list();
+		try {
+			String hql = "FROM User";
+			Query query = sessionFactory.getCurrentSession().createQuery(hql);
+			return	query.list();
+		} catch (HibernateException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+			return null;
+		}
 		
 	}
 	

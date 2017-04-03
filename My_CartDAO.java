@@ -1,4 +1,4 @@
-package com.niit.jewellarycartbackend.dao;
+/*package com.niit.jewellarycartbackend.dao;
 
 import java.util.List;
 
@@ -30,3 +30,4 @@ public List<My_Cart> list();
 
 
 }
+*/

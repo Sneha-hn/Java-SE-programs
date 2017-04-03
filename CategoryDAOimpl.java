@@ -5,6 +5,7 @@ import java.util.List;
 import javax.transaction.Transactional;
 
 import org.hibernate.HibernateException;
+import org.hibernate.Query;
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
@@ -24,19 +25,29 @@ public class CategoryDAOimpl implements CategoryDAO {
 		 this.sessionFactory= sessionFactory;
 	}
 	
-	@SuppressWarnings("unchecked")
+	@SuppressWarnings({ "unchecked", "rawtypes" })
+	@Transactional
 	public List<Category> list() {
-		
-		return	sessionFactory.getCurrentSession().createQuery("from Category").list();
+		try {
+			String hql = "FROM Category";
+			Query query = sessionFactory.getCurrentSession().createQuery(hql);
+			return	query.list();
+		} catch (HibernateException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+			return null;
+		}
 	}
 @Transactional
 	public boolean save(Category category) {
 		try {
-			sessionFactory.getCurrentSession().save(category);
+			sessionFactory.getCurrentSession().saveOrUpdate(category);
+			return true;
 		} catch (HibernateException e) {
 			e.printStackTrace();
+			return false;
 		}
-		return false;
+		
 	}
 
 @Transactional
@@ -58,6 +69,7 @@ public class CategoryDAOimpl implements CategoryDAO {
 		}
 		return false;
 	}
+
 
 @Transactional
 	public boolean delete(Category category) {

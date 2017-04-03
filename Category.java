@@ -1,8 +1,12 @@
 package com.niit.jewellarycartbackend.domain;
 
+import java.util.Set;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 import org.springframework.stereotype.Component;
@@ -13,18 +17,33 @@ import org.springframework.stereotype.Component;
 @Component
 public class Category {
 
-	@Id
+	
 	private String id;
 
-	@Column
+	
 	private String name;
 
 	private String description;
+	
+	private Set<Product> products;
+	
+	@OneToMany(mappedBy="category",fetch= FetchType.EAGER) // to fetch the list of products lazy will wait for the action to perform but not in case of eager
+	public Set<Product> getProducts() { // to get the list of products
+		return products;
+	}
 
+	public void setProducts(Set<Product> products) {
+		this.products = products;
+	}
+
+	
+	
+	@Id
 	public String getId() {
 		return id;
 	}
 
+	
 	public void setId(String id) {
 		this.id = id;
 	}

@@ -5,6 +5,7 @@ import java.util.List;
 import javax.transaction.Transactional;
 
 import org.hibernate.HibernateException;
+import org.hibernate.Query;
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
@@ -24,14 +25,22 @@ public  class ProductDAOimpl implements ProductDAO{
 	
 	@SuppressWarnings("unchecked")
 	public List<Product> list(){
-		return sessionFactory.getCurrentSession().createQuery("from Product").list();
+		try {
+			String hql = "FROM Product";
+			Query query = sessionFactory.getCurrentSession().createQuery(hql);
+			return	query.list();
+		} catch (HibernateException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+			return null;
+		}
 		
 	}
 	
 	public boolean save (Product product){ 
 	
 		try {
-			sessionFactory.getCurrentSession().save (product);
+			sessionFactory.getCurrentSession().saveOrUpdate(product);
 		} catch (HibernateException e) {
 			e.printStackTrace();
 		}

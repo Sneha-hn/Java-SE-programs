@@ -6,7 +6,7 @@ import javax.persistence.Table;
 
 import org.springframework.stereotype.Component;
 
-@Entity
+/*@Entity
 @Table
 @Component
 public class My_Cart {
@@ -51,4 +51,4 @@ public class My_Cart {
 		this.quantity = quantity;
 	}
 
-}
+}*/

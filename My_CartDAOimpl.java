@@ -1,4 +1,4 @@
-package com.niit.jewellarycartbackend.daoimpl;
+/*package com.niit.jewellarycartbackend.daoimpl;
 
 import java.util.List;
 
@@ -83,5 +83,5 @@ public class My_CartDAOimpl implements My_CartDAO {
 		}	
 	 
 }
-
+*/
 

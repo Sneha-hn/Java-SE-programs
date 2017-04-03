@@ -5,6 +5,7 @@ import java.util.List;
 import javax.transaction.Transactional;
 
 import org.hibernate.HibernateException;
+import org.hibernate.Query;
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
@@ -24,14 +25,23 @@ public class SupplierDAOimpl implements SupplierDAO {
 	
 	@SuppressWarnings("unchecked")
 	public List<Supplier> list(){
-		return sessionFactory.getCurrentSession().createQuery("from Supplier").list();
+		try {
+			String hql = "FROM Supplier";
+			Query query = sessionFactory.getCurrentSession().createQuery(hql);
+			return	query.list();
+		} 
+		catch (HibernateException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+			return null;
+		}
 		
 	}
 	
 	public boolean save (Supplier supplier){ 
 	
 		try {
-			sessionFactory.getCurrentSession().save(supplier);
+			sessionFactory.getCurrentSession().saveOrUpdate(supplier);
 		} catch (HibernateException e) {
 			e.printStackTrace();
 		}
